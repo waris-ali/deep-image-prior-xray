@@ -45,7 +45,6 @@ This formulation is an **inverse problem**: recover x from y = x + n, where n is
 ![Result](results/dip_xray_result.png)
 
 # Default (800 iterations, noise σ=25)
-python deep_image_prior.py
 
 # Custom settings
 python deep_image_prior.py --iters 1000 --noise_std 30 --save_steps 100
