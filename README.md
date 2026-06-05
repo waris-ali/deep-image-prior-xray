@@ -44,15 +44,6 @@ This formulation is an **inverse problem**: recover x from y = x + n, where n is
 
 ![Result](results/dip_xray_result.png)
 
----
-
-## Installation
-
-```bash
-pip install torch torchvision numpy matplotlib scikit-image
-```
-
-## Usage
 
 ```bash
 # Default (800 iterations, noise σ=25)
@@ -62,48 +53,18 @@ python deep_image_prior.py
 python deep_image_prior.py --iters 1000 --noise_std 30 --save_steps 100
 
 # Results saved to results/dip_xray_result.png
-```
-
----
-
-## Connection to Heckel Group Research (TUM)
-
-This project is directly inspired by Prof. Reinhard Heckel's work on:
-
-- **"Deep Image Prior"** — Ulyanov, Vedaldi, Lempitsky (2018); extended by Heckel & Hand (2020) with tighter convergence guarantees
-- **"Regularising Linear Inverse Problems with Convolutional Neural Networks"** — Heckel & Reinhard (2019)
-- **Score-based / diffusion models for MRI/CT reconstruction** — active research direction in the Heckel Group
-
-The physics motivation (dose optimisation under measurement constraints) maps directly to the inverse problems framing central to the group's work.
-
----
-
 ## Project Structure
 
 ```
-deep_image_prior_xray/
-├── deep_image_prior.py    # Main script — network, training loop, evaluation
+deep_image_prior_xray
 ├── requirements.txt       # Dependencies
 ├── results/
 │   └── dip_xray_result.png
 └── README.md
-```
 
----
 
-## Background: M.Phil Research
-
-My thesis (*Quality Control Procedure of Different Parameters of X-Ray Systems and Optimisation of Radiation Doses to the Patient*, Gomal University, 2023) evaluated:
-- kVp accuracy, mAs linearity, exposure reproducibility
-- Half Value Layer (HVL) measurements
-- Image quality vs. radiation dose trade-offs
-
-This project extends that domain knowledge into the computational/ML framework — bridging classical medical physics with modern deep learning for imaging.
-
----
 
 ## References
-
 1. Ulyanov, D., Vedaldi, A., & Lempitsky, V. (2018). Deep Image Prior. *CVPR*.
 2. Heckel, R., & Hand, P. (2020). Deep Decoder: Concise Image Representations from Untrained Non-convolutional Networks. *ICLR*.
 3. Heckel, R., Reinhard, M. (2019). Regularising Linear Inverse Problems with Convolutional Neural Networks. *arXiv*.
