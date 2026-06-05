@@ -1,7 +1,7 @@
 # Deep Image Prior for X-Ray Image Denoising
 
-**Author:** Waris Ali — M.Phil Physics (Radiation Protection & Health Physics), Gomal University  
-**Context:** PhD Application — Deep Learning for Medical Imaging, Prof. Reinhard Heckel, TUM
+**Author:** Waris Ali — M.Phil Physics (Radiation Protection & Health Physics),
+**Context:** Deep Learning for Medical Imaging
 
 ---
 
@@ -13,7 +13,7 @@ The key insight (Ulyanov et al., 2018): a randomly-initialised convolutional net
 
 ### Why X-Ray Imaging?
 
-My M.Phil thesis investigated quality control of diagnostic X-ray systems and patient radiation dose optimisation. A central challenge in X-ray imaging is the **dose–quality trade-off**: reducing radiation dose increases noise. DIP addresses this directly — it can restore image quality from low-dose (high-noise) acquisitions without requiring paired clean/noisy training data. This is precisely the clinical problem in radiation protection.
+investigated quality control of diagnostic X-ray systems and patient radiation dose optimisation. A central challenge in X-ray imaging is the **dose–quality trade-off**: reducing radiation dose increases noise. DIP addresses this directly — it can restore image quality from low-dose (high-noise) acquisitions without requiring paired clean/noisy training data. This is precisely the clinical problem in radiation protection.
 
 ---
 
@@ -44,8 +44,6 @@ This formulation is an **inverse problem**: recover x from y = x + n, where n is
 
 ![Result](results/dip_xray_result.png)
 
-
-```bash
 # Default (800 iterations, noise σ=25)
 python deep_image_prior.py
 
